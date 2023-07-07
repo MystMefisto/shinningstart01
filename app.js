@@ -25,7 +25,7 @@ submit.addEventListener('click', e => {
     if (numbersCount < 8) {
         // Less than 8 numbers
         const messageElement = document.createElement('li');
-        messageElement.classList.add('length-message', 'list-group-item', 'list-group-item-danger');
+        messageElement.classList.add('length-message', 'list-group-item', 'list-group-item-danger','animate__animated','animate__fadeInDown');
         messageElement.innerText = 'Introduce at least 8 digits';
         result.appendChild(messageElement);
         setTimeout(() => {
@@ -35,7 +35,7 @@ submit.addEventListener('click', e => {
     if (lettersCount > 0) {
         // Has letters
         const messageElement = document.createElement('li');
-        messageElement.classList.add('length-message', 'list-group-item', 'list-group-item-danger');
+        messageElement.classList.add('length-message', 'list-group-item', 'list-group-item-danger','animate__animated','animate__fadeInDown');
         messageElement.innerText = 'Please, no letters';
         result.appendChild(messageElement);
         setTimeout(() => {
@@ -44,7 +44,7 @@ submit.addEventListener('click', e => {
     } 
     if (!isBinary) {
         const messageElement = document.createElement('li');
-        messageElement.classList.add('length-message', 'list-group-item', 'list-group-item-danger');
+        messageElement.classList.add('length-message', 'list-group-item', 'list-group-item-danger','animate__animated','animate__fadeInDown');
         messageElement.innerText = 'This is a BINARY converter, use binary numbers';
         result.appendChild(messageElement);
         setTimeout(() => {
@@ -90,7 +90,7 @@ submit.addEventListener('click', e => {
         //Then create the element to show
         //the convertion result
         showResult = document.createElement('span');
-        showResult.classList.add('show-result', 'text-break', 'fs-2', 'fw-medium', 'text-primary');
+        showResult.classList.add('show-result', 'text-break', 'fs-2', 'fw-medium', 'text-primary', 'animate__fadeInUp','animate__animated');
         showResult.innerHTML = `RESULTS: ${result}`;
         convertion.appendChild(showResult);
     }

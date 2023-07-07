@@ -6,30 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Decimales para bobitos</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Animation -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 </head>
 
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light mb-5 p-3">
+    <nav class="navbar navbar-expand-lg navbar-color mb-5 p-3">
         <div class="container-fluid mx-3">
-            <a class="navbar-brand mt-3" href="#"> <img class="logo" src="/assets/logo.png" alt="" />efisto</a>
-            <a class="navbar-brand mt-3 " href="">Other projects</a>
+            <a class="navbar-brand mt-3 text-light animate__animated animate__backInLeft" href="#"> <img class="logo"
+                    src="/assets/logo.png" alt="" />efisto</a>
+            <a class="navbar-brand mt-3 text-light" href="">Other projects</a>
         </div>
     </nav>
 
 
-    <div class="container container-fluid pt-5">
-        <h1 class="title mb-4">Binary to decimal convertion</h1>
+    <div class="container container-fluid pt-1">
+        <h1 class="title mb-2">Binary to decimal convertion</h1>
+        <h5 class="mb-3"> Enter a <mark class="mark-color text-light">binary number</mark>, get a <mark
+                class="mark-color text-light">decimal</mark>conversion</h5>
         <div class="input-group  input-group-lg">
-            <input class="input-convertion form-control" placeholder="Introduce decimal numbers ONLY!" type="text">
-            <button class="btn btn-lg btn-primary btn-convertion" href=""> Convert!</button>
+            <input class="input-convertion form-control" placeholder="Introduce binary numbers ONLY!" type="text">
+            <button class="btn btn-lg btn-convertion text-light href=""> Convert!</button>
         </div>
-        <div class="result-container">
-            <ul class="result list-group"></ul>
+        <div class=" result-container mb-3">
+                <ul class="result list-group"></ul>
         </div>
-        <div class="convertion-container pt-3">
+        <div class="convertion-container pt-3 mb-3">
             <!-- Here show the result -->
         </div>
         <script src="app.js"></script>
@@ -37,6 +42,30 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous">
         </script>
+
+        <div class="container position-absolute mb-5 explanation-container">
+            <h2>How it works?</h2>
+            <p>
+                Converting a binary number to decimal is a straightforward process. The binary system uses only two
+                digits, 0 and 1, while the decimal system uses ten digits, from 0 to 9. To convert a binary number to
+                decimal, follow these steps:
+            </p>
+
+            <ol class="list-group">
+                <li>Take the binary number and write it from right to left, assigning an index to each digit. The index of
+                the rightmost digit is 0, the next one is 1, then 2, and so on.
+                </li>
+                <li>For each binary digit, multiply the digit by 2 raised to the corresponding index and sum up the results
+                of all the multiplications.
+            </li>
+            <li>
+                Repeat step 2 for all binary digits.
+            </li>
+            <li>
+                The total sum obtained is the decimal number equivalent to the original binary number.
+            </li>
+            </ol>
+        </div>
     </div>
 </body>
 
